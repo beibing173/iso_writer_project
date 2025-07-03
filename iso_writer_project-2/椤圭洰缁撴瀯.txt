@@ -1,0 +1,73 @@
+ISO写入器项目文件结构
+========================
+
+📁 项目根目录/
+├── 📄 iso_writer_final.py      # 主程序文件（核心）
+├── 📄 build_exe.py             # 自动打包脚本
+├── 📄 bootloader_utils.py      # 引导工具模块（可选）
+├── 📄 pe.iso                   # PE工具文件（必需）
+├── 📄 requirements.txt         # Python依赖列表
+├── 📄 README.md               # 项目说明文档
+├── 📄 打包教程.md              # 详细打包教程
+├── 📄 todo.md                 # 开发任务清单
+└── 📄 项目结构.txt             # 本文件
+
+核心文件说明：
+=============
+
+🔥 iso_writer_final.py
+   - 主程序文件，包含完整的GUI界面和ISO写入功能
+   - 自动检测并集成同目录下的pe.iso文件
+   - 支持Windows、Linux、macOS跨平台运行
+   - 具有现代化的图形用户界面
+
+🔧 build_exe.py
+   - 自动化打包脚本
+   - 自动检测并安装PyInstaller
+   - 创建打包配置文件
+   - 一键生成可执行文件
+
+💾 pe.iso
+   - PE工具系统文件
+   - 程序会自动检测此文件并集成到USB中
+   - 如果文件不存在，程序仍可正常工作但不会集成PE功能
+
+📋 requirements.txt
+   - 列出了所有Python依赖包
+   - 用于pip安装依赖：pip install -r requirements.txt
+
+📖 README.md
+   - 完整的项目说明文档
+   - 包含安装、使用、故障排除等信息
+
+📚 打包教程.md
+   - 详细的打包指南
+   - 包含自动和手动打包方法
+   - 故障排除和优化建议
+
+使用流程：
+=========
+
+1. 开发阶段：
+   python iso_writer_final.py
+
+2. 打包阶段：
+   python build_exe.py
+
+3. 分发阶段：
+   将dist/ISO写入器.exe和pe.iso一起分发
+
+最小分发包：
+===========
+📁 ISO写入器_v2.0/
+├── 📄 ISO写入器.exe    # 主程序（必需）
+├── 📄 pe.iso          # PE工具（推荐）
+└── 📄 README.md       # 使用说明（推荐）
+
+注意事项：
+=========
+- pe.iso文件必须与exe文件在同一目录
+- 程序需要管理员权限运行
+- 支持的ISO文件格式：标准ISO 9660格式
+- 推荐USB设备：USB 3.0或更高版本
+

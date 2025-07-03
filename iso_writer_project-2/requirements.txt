@@ -1,0 +1,33 @@
+# ISO写入器依赖包列表
+
+# 核心依赖
+# tkinter - GUI界面库（Python标准库，通常无需单独安装）
+
+# 打包依赖
+pyinstaller>=5.0.0
+
+# 可选依赖（用于增强功能）
+# 注意：以下包在某些系统上可能需要额外的系统依赖
+
+# Windows特定依赖
+pywin32>=300; sys_platform == "win32"
+
+# 跨平台文件操作
+pathlib2>=2.3.0; python_version < "3.4"
+
+# 进度条和界面增强
+tqdm>=4.60.0
+
+# 系统信息获取
+psutil>=5.8.0
+
+# 注意事项：
+# 1. tkinter是Python标准库的一部分，在大多数Python安装中都包含
+# 2. 如果在Linux上tkinter不可用，请安装：
+#    Ubuntu/Debian: sudo apt-get install python3-tk
+#    CentOS/RHEL: sudo yum install tkinter
+#    Fedora: sudo dnf install python3-tkinter
+# 3. 在macOS上，tkinter通常随Python一起安装
+# 4. pywin32仅在Windows上需要，用于系统级操作
+# 5. 其他依赖包是可选的，用于增强功能
+
